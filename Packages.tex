@@ -1,0 +1,126 @@
+% Anpassung des Seitenlayouts --------------------------------------------------
+%   siehe Seitenstil.tex
+% ------------------------------------------------------------------------------
+\usepackage[
+    automark, % Kapitelangaben in Kopfzeile automatisch erstellen
+    headsepline, % Trennlinie unter Kopfzeile
+    ilines % Trennlinie linksbündig ausrichten
+]{scrpage2}
+
+% Sprache und Umlaute
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+% Schrift ----------------------------------------------------------------------
+\usepackage{lmodern}
+\usepackage{relsize}
+
+% Grafiken ---------------------------------------------------------------------
+\usepackage[dvips,final]{graphicx}
+\graphicspath{{img/}}
+
+\usepackage{pdfpages}
+
+% für Index-Ausgabe mit \printindex --------------------------------------------
+\usepackage{makeidx}
+
+% Einfache Definition der Zeilenabstände und Seitenränder etc. -----------------
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{dirtree}
+
+
+% zum Einbinden von Programmcode -----------------------------------------------
+
+% es wird das Texments Package zusammen mit Pygments verwendet
+% Pygments bietet Syntax Highlighting für Swift (und andere Sprachen)
+% Installationshinweise auf http://www.zoppelt.net/2014/08/using-swift-language-in-latex/
+
+% \usepackage{texments}
+% \usestyle{xcode}
+
+
+% URL verlinken, lange URLs umbrechen etc. -------------------------------------
+\usepackage{url}
+\makeatletter
+\makeatother
+
+% wichtig für korrekte Zitierweise ---------------------------------------------
+\usepackage{natbib}
+% \usepackage[sort\&compress,numbers]{natbib}
+% \usepackage{url}
+% \usepackage[htt]{hyphenat}
+% \usepackage{hyperxmp}
+
+% PDF-Optionen -----------------------------------------------------------------
+% fortlaufendes Durchnummerieren der Fußnoten ----------------------------------
+\usepackage{chngcntr}
+
+% Lange Tabellen ---------------------------------------------------------------
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{lscape}
+
+% Spaltendefinition rechtsbündig mit definierter Breite ------------------------
+\newcolumntype{w}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Formatierung von Listen ändern -----------------------------------------------
+\usepackage{paralist}
+
+% bei der Definition eigener Befehle benötigt
+\usepackage{ifthen}
+
+% definiert u.a. die Befehle \todo und \listoftodos
+\usepackage{todonotes}
+
+% sorgt dafür, dass Leerzeichen hinter parameterlosen Makros nicht als Makroendezeichen interpretiert werden
+\usepackage{xspace}
+\usepackage[bottom]{footmisc}
+\usepackage{units}
+\usepackage[section]{placeins}
+\usepackage{float}
+
+
+\usepackage[
+    bookmarks,
+    bookmarksnumbered=true, % Zeigt nummerierung an
+    bookmarksopen=true,		% Zeigt Lesezeichenleiste in PDF-Reader an
+    bookmarksopenlevel=1, 	% gibt die Tiefe an
+    colorlinks=true,
+% diese Farbdefinitionen zeichnen Links im PDF farblich aus
+      linkcolor=black, 	% einfache interne Verknüpfungen
+      anchorcolor=black,	% Ankertext
+      citecolor=blue, 	% Verweise auf Literaturverzeichniseinträge im Text
+      filecolor=magenta, % Verknüpfungen, die lokale Dateien öffnen
+      menucolor=blue, 	% Acrobat-Menüpunkte
+      urlcolor=blue,
+% diese Farbdefinitionen sollten für den Druck verwendet werden (alles schwarz)
+%   linkcolor=black, % einfache interne Verknüpfungen
+%   anchorcolor=black, % Ankertext
+%   citecolor=black, % Verweise auf Literaturverzeichniseinträge im Text
+%   filecolor=black, % Verknüpfungen, die lokale Dateien öffnen
+%   menucolor=black, % Acrobat-Menüpunkte
+%   urlcolor=black,
+    backref,
+    plainpages=false, 	% zur korrekten Erstellung der Bookmarks
+    pdfpagelabels, 		% zur korrekten Erstellung der Bookmarks
+    hypertexnames=false, % zur korrekten Erstellung der Bookmarks
+    %linktocpage, 		% Seitenzahlen anstatt Text im Inhaltsverzeichnis verlinken
+    %pdfborder={0 0 0},	% kein Rahmen
+    breaklinks=true
+]{hyperref}
+
+% Befehle, die Umlaute ausgeben, führen zu Fehlern, wenn sie hyperref als Optionen übergeben werden
+\hypersetup{
+    pdftitle={\titel}, %\untertitel},
+    % pdfauthor={\autor},
+    % pdfcreator={\autor},
+    pdfsubject={\titel}, %\untertitel},
+    pdfkeywords={\titel}, %\untertitel},
+}

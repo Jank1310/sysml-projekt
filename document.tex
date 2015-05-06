@@ -1,0 +1,39 @@
+%!TEX TS-options = --shell-escape
+\documentclass[11pt,DIV10,ngerman,a4paper,oneside,titlepage,parskip=half,headings=normal,listof=totoc,bibliography=totoc,index=totoc,captions=tableheading,final,twoside]{scrreprt}
+
+\input{Meta}
+\input{Packages}
+\makeindex
+\usepackage[toc]{glossaries}
+\makeglossaries
+\input{Seitenstil}
+\input{Befehle}
+
+\begin{document}
+	
+	\setcounter{secnumdepth}{3}
+	\setcounter{tocdepth}{3}
+	
+	\ofoot{}
+	\include{Deckblatt}
+	\ofoot{\pagemark}
+	
+	\pagenumbering{Roman}
+	\setcounter{page}{0}
+	\tableofcontents
+	\listoffigures
+	\pagenumbering{arabic}
+
+	\setcounter{page}{1}
+	\input{Inhalt/00Inhalt}	
+
+	\printglossary[title=Glossar,toctitle=Glossar]
+
+	\newpage
+	\bibliography{Bibliografie}
+	\bibliographystyle{plain}
+	
+	% Index
+	\printindex
+
+\end{document}

@@ -1,0 +1,44 @@
+% Zeilenabstand 1,5 Zeilen -----------------------------------------------------
+\onehalfspacing
+
+% Seitenränder -----------------------------------------------------------------
+\setlength{\topskip}{\ht\strutbox} % behebt Warnung von geometry
+\geometry{paper=a4paper,left=30mm,right=30mm,top=30mm,bottom=45mm}
+
+% Kopf- und Fußzeilen ----------------------------------------------------------
+\pagestyle{scrheadings}
+% Kopf- und Fußzeile auch auf Kapitelanfangsseiten
+\renewcommand*{\chapterpagestyle}{scrheadings}
+
+% Schriftform der Kopfzeile
+\renewcommand{\headfont}{\normalfont}
+
+% Kopfzeile
+\ihead{
+	\begin{minipage}[b]{0.8\textwidth}		% MaxLength \ihead, damit text nicht hinter Logo.
+		\large{\textsc{\titel}} 
+		\\[1ex] 
+		\textit{\headmark}
+	\end{minipage}
+}
+\chead{}
+\ohead[2cm]{\includegraphics[scale=0.04]{ohm_logo_plain.png}}
+\setlength{\headheight}{10mm} % Höhe der Kopfzeile
+
+% Kopfzeile über den Text hinaus verbreitern
+\setheadwidth[0cm]{15cm}
+\setheadsepline[15cm]{0.4pt} % Trennlinie unter Kopfzeile
+
+% Fußzeiles
+%\ifoot{\copyright\ \autor}	%Innenseite des Dokuments
+\cfoot{}					%Mitte
+\ofoot{\pagemark}			%Außenseite
+
+% sonstige typographische Einstellungen ----------------------------------------
+
+% erzeugt ein wenig mehr Platz hinter einem Punkt
+\frenchspacing
+
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
