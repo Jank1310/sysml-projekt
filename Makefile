@@ -15,4 +15,4 @@ all:
 
 clean:
 	-rm -fr *.bcf *.run.xml _*_.* *~ *.aux *-blx.bib *.bbl ${MAINDOCUMENTBASENAME}.dvi *.ps *.glsdefs *.blg *.idx *.ilg *.ind *.toc *.log *.log *.gls *.glg *.ist *.brf *.out *.lof *.lot *.gxg *.glx *.gxs *.glo *.gls *.tdo -f
-	-rm ${PDFDOCNAME} ${MAINDOCUMENTBASENAME}.pdf
+	-rm ${MAINDOCUMENTBASENAME}.pdf
