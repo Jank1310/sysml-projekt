@@ -124,5 +124,7 @@ sympy-plots-for-*.tex/
 # WinEdt
 *.bak
 *.sav
-build/document.pdf
+
+# ignore build folder
+build/
 Literatur/Websites Matthias.txt
