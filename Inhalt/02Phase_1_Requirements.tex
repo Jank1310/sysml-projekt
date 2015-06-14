@@ -1,8 +1,8 @@
 \section{Requirements}
-Zur Spezifikation\todo{Glossar} der Smartwatch wurden - neben den in Abschnitt~\ref{sec:use_cases} beschriebenen UseCases - die wichtigsten Requirements\todo{Glossar} gesammelt und festgehalten. Um die Übersicht und Nachvollziehbarkeit zu verbesseren, werden diese in die folgenden Kategorien eingeteilt:
+Zur Spezifikation\todo{Glossar} der Smartwatch wurden - neben den in Abschnitt~\ref{sec:use_cases} beschriebenen UseCases - die wichtigsten Requirements\todo{Glossar} gesammelt und festgehalten. Um die Übersicht und Nachvollziehbarkeit zu verbessern, werden diese in die folgenden Kategorien eingeteilt:
 
 \begin{itemize}
-	\item Ausgabe -- Ausgabe beinhaltet alle Requirements, die sich auf die grafische und auf die akkustische Ausgabe beziehen.
+	\item Ausgabe -- Ausgabe beinhaltet alle Requirements, die sich auf die grafische und auf die akustische Ausgabe beziehen.
 	\item Usability\todo{Glossar} -- Alle Requirements zur Beschreibung der Bedienbarkeit der Smartwatch
 	\item Kapazität -- Alle Requirements bezüglich der Energieversorgung
 	\item Funktionen -- Funktionen beinhaltet alle Requirements, die konkrete Funktionen der Smartwatch beschreiben
@@ -14,13 +14,14 @@ Das Package-Diagram in Abbildung~\ref{fig:package_diagram_requirements} teilt di
 \begin{figure}[H]
 \centering\
 \includegraphics[width=14cm]{img/package_diagram_smartWatch_requirements}
-\caption[Requirements: Package Diagram]{Package Diagram der einzelnen Requirement-Kategorien}\label{fig:package_diagram_requirements}
+\caption[Requirements: Package Diagram]{Package Diagram der einzelnen Requirement-Kategorien}
+\label{fig:package_diagram_requirements}
 \end{figure}
 
 Tabelle~\ref{tab:table_requirements} enthält die gesammelten Requirements aufgeteilt in die einzelnen Kategorien.
 
 \begin{center}
-	\begin{longtable}{|L{2cm}|L{3cm}|L{8.5cm}|}
+	\begin{longtable}{|L{2.5cm}|L{3cm}|L{8.5cm}|}
 		\caption[Liste der Requirements]{Auflistung der gesammelten Requirements der Smartwatch} \label{tab:table_requirements} \\
 		\hline \multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Name}} & \multicolumn{1}{c|}{\textbf{Text}} \\ \hline
 		\endfirsthead
@@ -30,7 +31,7 @@ Tabelle~\ref{tab:table_requirements} enthält die gesammelten Requirements aufge
 		\hline \multicolumn{1}{|c|}{\textbf{ID}} & \multicolumn{1}{c|}{\textbf{Name}} & \multicolumn{1}{c|}{\textbf{Text}} \\ \hline
 		\endhead
 
-		\hline \multicolumn{3}{|r|}{{Fortgesetzt auf der nächsten Seite}} \\ \hline
+		\hline \multicolumn{3}{|r|}{{Fortsetzung auf der nächsten Seite}} \\ \hline
 		\endfoot
 
 		\hline \hline
@@ -50,7 +51,7 @@ Tabelle~\ref{tab:table_requirements} enthält die gesammelten Requirements aufge
 		\multicolumn{3}{|l|}{\textbf{Kapazität}} \\ \hline
 		Akku.01 & Akkulaufzeit & Eine Akkuladung soll bei normaler Benutzung mindestens 24 Stunden halten \\ \hline
 		Akku.02 & Akkuladezeit & Der Akku soll innerhalb von 2 Stunden vollständig geladen werden \\ \hline
-		Akku.03 & Induktionsladen & Der Akku soll über Induktion (z.B. Qi-Standard) geladen werden können \\ \hline
+		Akku.03 & Akku: Induktionsladen & Der Akku soll über Induktion (z.B. Qi-Standard) geladen werden können \\ \hline
 
 		%% Funktionen
 		\multicolumn{3}{|l|}{\textbf{Funktionen}} \\ \hline
@@ -68,3 +69,12 @@ Tabelle~\ref{tab:table_requirements} enthält die gesammelten Requirements aufge
 
 	\end{longtable}
 \end{center}
+
+Abbildung~\ref{fig:requirement_diagram_akku} zeigt das Requirement Diagramm der Requirements der Kategorie Kapazität. Besonders hervorzuheben ist die Abhängigkeit zwischen \textbf{Akkuladezeit} und \textbf{Akku: Induktionsladen}. Mittels des Stereotypes\todo{Glossar} \textbf{deriveReqt} wird signalisiert, dass \textbf{Akku: Induktionsladen} eine Erweiterung des Requirements \textbf{Akkuladezeit} ist, das bedeutet, dass für das Laden mittels Induktion die Ladezeitvorgabe (2 Stunden) des Akkuladezeit-Requirements gilt.
+
+\begin{figure}[H]
+\centering\
+\includegraphics[width=14cm]{img/requirement_diagram_akku}
+\caption[Requirements: Kapazität]{Requirement Diagram der Requirements der Kategorie Kapazität}
+\label{fig:requirement_diagram_akku}
+\end{figure}
