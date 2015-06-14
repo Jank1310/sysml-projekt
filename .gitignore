@@ -128,3 +128,6 @@ sympy-plots-for-*.tex/
 # ignore build folder
 build/
 Literatur/Websites Matthias.txt
+
+# tmp files
+*~
