@@ -31,27 +31,22 @@ Um die Struktur des Smartwatches zu gliedern und so Schichten in verschieden Abs
 einzuführen werden Paketdiagramme verwendet.
 Der Smartwatch wurde dabei in funktionalen und logischen Einheiten zerlegt und in dem jeweiligen Paket zugeordnet.
 Über die rein funktionalen Eigenschaften des Systems werden auch die nicht-funktionalen Anforderungen des Smartwatches in Pakete definiert.
-
-
 Die Abbildung ~\ref{fig:package} beschreibt die Pakete des Smartwatches.
+
 \begin{figure}[H]
 \centering\
-\includegraphics[width=8cm]{img/package}
+\includegraphics[width=8cm]{img/PackagePhase1}
 \caption{Packetdiagramm}\label{fig:package}
 \end{figure}
 
-Die Elemente des Pakets Smartwatch sind wiederum Pakete, welche die verschiedenen funktionalen Zuständigkeiten innerhalb des Pakets SmartWatch beschreiben.
+Die Elemente des Paket \textit{Smartwatch} sind wiederum Pakete, welche die verschiedenen funktionalen Zuständigkeiten innerhalb des Pakets \textit{SmartWatch} beschreiben.
 Der Smartwatch-Paket ist in Hardware, Software und den nicht-funktionalen Anforderungen
 gegliedert (\textit{SmartWatchSpecification}).
 Für die Verbindung sorgt Bluetooth 4.0.
 Als Sensoren kommen ein Schrittzähler, ein Pulsmesser, Temperatursensor und Gyroskop zum Einsatz. Für die Verbindung sorgt Bluetooth 4.0.
-Die Sensoren können z.B zur Aktivitätserkennung.
+Die Sensoren können z.B zur Aktivitätserkennung genutzt werden.
 Der Smartwatch besitz ein Display, auf dem dann wichtige Infos wie Anrufernummer und Benachrichtigungen und die Uhrzeit angezeigt werden.
 Die weiteren Hardwarebausteine sind im Package \textit{Hardware} zu finden.
-
-Standard Anwendungen die mit dem Smartwatch geliefert werden, sind Uhrzeitangaben, Erinnerungsfunktionen, Kalender Funktionalität, Benachrichtigungen oder die Aktivitätserkennung. Klassische Anwendungen sind auch die Fitnessfunktionalitäten.
-Mit der mitegelieferten API \textit{AppKit} lassen sich Apps für die SmartWatch programmieren, die eng mit dem Smartpohone zusammenarbeiten.
-Die softwaretechnische Paketstruktur ist im Package \textit{Software} abgebildet.
 
 \section{Block Definition Diagram !!!Nochmal durchlesen!!!überarbeiten!!! auf die Values der Blocks eingehen!!!}
 
