@@ -8,15 +8,15 @@ Klassische Anwendungen sind auch die Fitnessfunktionalitäten.
 Mit der mitegelieferten API \textit{AppKit} lassen sich Apps für die SmartWatch programmieren, die eng mit dem Smartpohone zusammenarbeiten.
 Die softwaretechnische Paketstruktur ist im Package \textit{Software} abgebildet.
 
-\begin{figure}[H]
+\begin{figure}[h]
 \centering\
-\includegraphics[width=8cm]{img/PackagePhase2}
-\caption{Packetdiagramm}\label{fig:package}
+\includegraphics[width=\textwidth]{img/PackagePhase2}
+\caption{Packagediagram}\label{fig:package}
 \end{figure}
 
 \section{Class Diagram}
 
-\section{Block Definition Diagram}
+\input{Inhalt/04Phase_3_BlockDefinitionDiagram}
 
 \section{Timing Diagram}
 
@@ -65,7 +65,12 @@ In diesem Diagramm kann man die Beziehungen zwischen den Parametern der einzelne
 \end{figure}
 
 
-\section{Activity Diagram}
+\input{Inhalt/04Phase_3_ActivityDiagram}
 
 \section{Sequence Diagram}
 
+Das folgende Sequenzdiagramm zeigt die Szenario einer Mitteilung. Zu Beginn erhält die Smartphone die Nachricht ("message"). Die erhaltene Nachricht leitet er weiter an Smartwatch mit dem Operator sendMessage(). Danach wird die Nachricht im Display angezeigt, das Smartwatch schickt dem Display eine Nachricht mit showMessage() und zur selben Zeit kann eine Benachrichtigung stattfinden. Dabei gibt es vier Möglichkeiten einer Benachrichtigung.
+1.: Der Bedingung ist, dass Vibration und Sound an ist. Das Smartwatch vibriert und anschließend kommt auch eine Benachrichtigungston.
+2.: Der Bedingung ist, dass Vibration an und Sound aus ist. Das Smartwatch vibriert, allerdings kommt kein Benachrichtigungston.
+3.: Der Bedingung ist, dass Vibration aus und Sound an ist. Das Smartwatch vibriert nicht, stattdessen kommt ein Benachrichtigungston.
+4.: else. Vibration und Sound ist aus.
