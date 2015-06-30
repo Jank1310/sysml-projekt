@@ -1,6 +1,5 @@
 %!TEX TS-options = --shell-escape
 \documentclass[11pt,DIV10,ngerman,a4paper,oneside,titlepage,parskip=half,headings=normal,listof=totoc,bibliography=totoc,index=totoc,captions=tableheading,final,twoside]{scrreprt}
-
 \input{Meta}
 \input{Packages}
 \makeindex
@@ -23,7 +22,7 @@
 	\tableofcontents
 	\listoffigures
 	\pagenumbering{arabic}
-	\listoftodos
+	% \listoftodos
 	\setcounter{page}{1}
 	\input{Inhalt/00Inhalt}
 
@@ -32,6 +31,8 @@
 	\newpage
 	\bibliography{Bibliografie}
 	\bibliographystyle{plain}
+
+\input{Appendix}
 
 	% Index
 	\printindex
