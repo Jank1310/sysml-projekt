@@ -5,7 +5,7 @@
 Nun werden die Usecases aus Phase 1 mithilfe von User Stories weiter beschrieben. Dabei liegt der Fokus auf Szenarien, die eine Interaktion mit dem Smartwatch-System abbilden.
 Die ersten beiden User Stories beschreiben zunächst einen typischen Hauptanwendungsfall der Uhr: Das Annehmen/Ablehnen/Tätigen von Anrufen von dem verbundenen Smartphone.
 Um dem Produkt eine detailgetreue Anleitung für einen reibungslosen Einrichtungsprozess beizulegen, wurde eine User Story speziell für das Einrichten, bzw. Koppeln der Smartwatch mit einem Smartphone definiert.
-Da eine Kernfunktionion der Smartwatch darin besteht, sie für Fitness-Tracking verschiedener sportlichen Aktivitäten einzusetzen, wurden mehrere User Stories für diese Anwendungsfälle entworfen. Außerdem wird die User Story "Joggen gehen" beschrieben, weitere Fitness-User Stories verhalten sich analog dazu.
+Da eine Kernfunktionion der Smartwatch darin besteht, sie für Fitness-Tracking verschiedener sportlichen Aktivitäten einzusetzen, wurden mehrere User Stories für diese Anwendungsfälle entworfen. Außerdem wird die User Story ,,Joggen gehen'' beschrieben, weitere Fitness-User Stories verhalten sich analog dazu.
 \begin{figure}[H]
 \centering\
 \includegraphics[width=10cm]{img/story_in}
@@ -36,27 +36,23 @@ Der Benutzer kann seinen Smartwatch in der Liste auswählen um die Kopplung zu s
 Danach wird der Benutzer aufgefordert auf seinem Smartphone jetzt die Bluetooth-Kopplungsanforderung mit dem Kopplungs-Code zu bestätigen. Der Kopplungs-Code wird in der Smartwatch angezeigt.
 Falls der Benutzer einen falschen Code eingegeben hat, wird die Kopplung vom Smartwatch
 abgelehnt.
-
-\begin{figure}[H]
+\begin{figure}[h]
 \centering\
 \includegraphics[width=14cm]{img/KoppelnSequenz}
 \caption{Kopplung des Smartphones mit Smartwatch}\label{fig:kopplung}
 \end{figure}
 
 
-\begin{figure}[H]
+In der Abbildung \ref{fig:anruf} ist das Anrufszenario als Sequence-Diagram abgebildet.
+Um einen Anruf zu betätigen muss der User erst über die Smartwatch den Kontakt wählen. Die Smartwatch sendet dem Smartphone eine Nachricht, dass es den Kontakt anrufen soll. Anschließend bestehen drei Möglichkeiten für den weiteren Ablauf des Szenarios.
+1.: Die erste Möglichkeit, geht von einem bestehenden Netz aus. Dies ist das ,,Happy Day''-Szenario. Dabei funktioniert der Verbindungsaufbau problemlos und der Angerufene hebt ab.
+2.: Die zweite Möglichkeit wäre, dass zwar eine Verbindung zustande kommt, jedoch der Angerufene nicht auf den Anruf reagiert.
+3.: Die letzte Möglichkeit ist, dass kein Netz vorhanden ist. Hier versucht der User zwar seinen Freund anzurufen, da aber kein Netz vorhanden ist, kommt ein Systemnachricht mit ,,kein Netz'' und der Anruf konnte nicht stattfinden.
+\begin{figure}[h]
 \centering\
 \includegraphics[width=13cm]{img/AnrufenSequenz}
 \caption{Anfrufen mit dem Smartwatch}\label{fig:anruf}
 \end{figure}
-
-
-In der Abbildung \ref{fig:anruf} ist das Anrufszenario als Sequnzdiagramm abgebildet.
-Um einen Anruf zu betätigen muss der User erst über die Smartwatch den Kontakt wählen. Die Smartwatch sendet dem Smartphone eine Nachricht, dass es den Kontakt anrufen soll. Anschließend bestehen drei Möglichkeiten für den weiteren Ablauf des Szenarios.
-1.: Die erste Möglichkeit, geht von einem bestehenden Netz aus. Dies ist das "Happy Day"-Szenario. Dabei funktioniert der Verbindungsaufbau problemlos und der Angerufene hebt ab.
-2.: Die zweite Möglichkeit wäre, dass zwar eine Verbindung zustande kommt, jedoch der Angerufene nicht auf den Anruf reagiert.
-3.: Die letzte Möglichkeit ist, dass kein Netz vorhanden ist. Hier versucht der User zwar seinen Freund anzurufen, da aber kein Netz vorhanden ist, kommt ein Systemnachricht mit "kein Netz" und der Anruf konnte nicht stattfinden.
-
 
 \input{Inhalt/03Phase_2_StateDiagram}
 
